@@ -1,48 +1,11 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
         </script><!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Онлайн казино Пін Ап</title>
+    <title>Казино Пін Ап ᐈ Вхід, Офіційний сайт 2025</title>
+    <meta name="description"
+        content="Ліцензійне онлайн-казино Пін Ап Україна ⚡ Грай в слоти Pin up на реальні гроші ⭐️ Реєструйся в Pin-up та забирай свої 350 FS" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -123,7 +86,13 @@
     <section class="promo">
         <h2>Казино Pin-Up</h2>
         <p>Приєднуйтесь до Пін Ап і отримайте щедрий бонус на перший депозит! Це ваш шанс насолодитися фрі спінами та отримати бонусних 200 000 грн.</p>
-        <button>🔥🔥Грати!🔥🔥</button>
+      			<a href="https://72782451.rdtracer.com" target="_blank">
+            <div class="red-button">
+                <span class="fire">🔥</span>
+                <span>150.000 ГРН + 750 FS</span>
+                <span class="fire">🔥</span>
+            </div>
+        </a>  
         <p>Відчуй справжню ейфорію від перемог в онлайн казино разом з нами! Наш широкий вибір слотів від найкращих розробників гарантує, що кожен знайде гру до душі. Приєднуйся і отримай максимум задоволення від гри!</p>
     </section>
 
@@ -274,25 +243,9 @@
         <p>Для отримання реальних коштів потрібен відіграш з вейджером від х21 до х26 залежно від суми (термін – 72 години).</p>
     </section>
 
-    <section class="slots">
-        <h2>Найкращі слоти вересня по версії гравців</h2>
-        <div class="slot">
-            <img src="slot1.jpg" alt="Слот 1">
-            <button>🔥Грати!🔥</button>
-        </div>
-        <div class="slot">
-            <img src="slot2.jpg" alt="Слот 2">
-            <button>🔥Грати!🔥</button>
-        </div>
-        <div class="slot">
-            <img src="slot3.jpg" alt="Слот 3">
-            <button>🔥Грати!🔥</button>
-        </div>
-    </section>
-
     <footer>
         <p>Залучення до азартних ігор може призвести до ігрової залежності. Важливо дотримуватися основних правил відповідальної гри. Якщо ви помітили перші симптоми залежності, не зволікайте і звертайтеся до спеціаліста за допомогою. Пам’ятайте, що азартні ігри не є способом заробітку або заміною для професійної діяльності.</p>
-        <p>© Copyright 2024 Пін Ап Вхід</p>
+        <p>© Copyright 2025 Пін Ап Вхід</p>
     </footer>
 </body>
 </html>
